@@ -1,21 +1,32 @@
-// Created by Evan Cagiannos
-// ICS2O-UNIT2-02-HTML
-// Created on: 2022-March-10
-//This file contains the JS functions for index.html
+// Copyright (c) 2022 Evan Cagiannos ALL rights reserved 
+//
+// Created by: Evan Cagiannos
+// Created on: April 2022
+// This file contains the JS functions for index.html
 
-"use strict";
 /**
- * This function calculates volume of pyramid.
+ * Check servie worker.
  */
-function doMathClicked() {
-  // this function does basic math
-  // input
-  const radius = parseInt(document.getElementById("radius-of-sphere").value);
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register(
+    "/ICS2O-Unit5-01-HTML/sw.js",
+    {
+      scope: "/ICS2O-Unit5-01-HTML/",
+    }
+  )
+}
 
-  // process
-  const volume = 4 / 3(Math.PI * radius ** 3);
+/**
+ * This function updates the slider value.
+ */
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+}
 
-  // output
-  document.getElementById("volume").innerHTML =
-    "Volume is: " + volume.toFixed(2) + " cm3";
+/**
+ * This function displays the slider value.
+ */
+function myButtonClicked() {
+  document.getElementById("hello-world").innerHTML =
+    "<p>Value is: " + slider.value + "</p>"
 }
