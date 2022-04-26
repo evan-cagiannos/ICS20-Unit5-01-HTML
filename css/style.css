@@ -12,7 +12,7 @@
 /* Due to error in MDL : https://github.com/google/material-design-lite/issues/5281
 */
 .mdl-ripple {
-  backround: #000
+  backround: #000;
   opacity: 0.001;
 }
 
