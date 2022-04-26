@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Evan Cagiannos ALL rights reserved 
+// Copyright (c) 2022 Evan Cagiannos ALL rights reserved
 //
 // Created by: Evan Cagiannos
 // Created on: April 2022
@@ -8,19 +8,16 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register(
-    "/ICS2O-Unit5-01-HTML/sw.js",
-    {
-      scope: "/ICS2O-Unit5-01-HTML/",
-    }
-  )
+  navigator.serviceWorker.register("/ICS2O-Unit5-01-HTML/sw.js", {
+    scope: "/ICS2O-Unit5-01-HTML/",
+  });
 }
 
 /**
  * This function updates the slider value.
  */
 function updateSliderValue(valueFromSlider) {
-  document.getElementById("slider-value").innerHTML = valueFromSlider
+  document.getElementById("slider-value").innerHTML = valueFromSlider;
 }
 
 /**
@@ -28,5 +25,5 @@ function updateSliderValue(valueFromSlider) {
  */
 function myButtonClicked() {
   document.getElementById("hello-world").innerHTML =
-    "<p>Value is: " + slider.value + "</p>"
+    "<p>Value is: " + slider.value + "</p>";
 }
